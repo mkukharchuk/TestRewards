@@ -17,6 +17,7 @@ export const Tab = styled.div<{active: boolean}>`
 export const TabsContainer = styled.div`
   display: flex;
   flex-direction: row;
+  padding-left: 30px;
 `;
 
 export const TabContent = styled.div`

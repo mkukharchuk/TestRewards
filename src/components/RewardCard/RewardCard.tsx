@@ -6,10 +6,10 @@ import { Text } from '../Text';
 import { Wrapper, RewardInfoBlock, RewardInfoBlockHeading } from './RewardCard.styled';
 
 export const RewardCard:React.FC <RewardItem> = ({
-  message = 'Lorem Ipsum', date = 'Fri, 02 Feb 2021 03:04:05 GMT', rewarder = 'David Granie', rewardie = 'Jhon Chen',
+  message = 'Lorem Ipsum', date = 'Fri, 02 Feb 2021 03:04:05 GMT', rewarder = 'David Granie', rewardRecipient = 'Jhon Chen',
 }) => {
   const transformedDate = useMemo(() => transformDate(date), [date]);
-  const rewardTitle = `${rewardie} rewarded by ${rewarder}`;
+  const rewardTitle = `${rewardRecipient} rewarded by ${rewarder}`;
 
   return (
     <Wrapper>

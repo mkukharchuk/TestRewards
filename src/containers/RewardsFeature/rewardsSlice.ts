@@ -1,15 +1,15 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import api from 'src/services/api';
+import { getRewardsList } from 'src/services/apiRoutes';
 import type { RootState } from '../../store/store';
 import { rewardsMockData } from './mockRewards';
 
 export interface RewardItem {
   id: number;
-  rewardie: string;
+  rewardRecipient: string;
   rewarder: string;
   date: string;
   message: string;
-  rewardieId: number;
+  rewardRecipientId: number;
 }
 interface RewardsState {
   rewards: RewardItem[];
@@ -24,7 +24,7 @@ const initialState: RewardsState = {
 };
 
 export const fetchRewards = createAsyncThunk('rewards/fetchRewards', async () => {
-  const response = await api.get('/rewards');
+  const response = await getRewardsList();
   return response.data;
 });
 
@@ -53,7 +53,7 @@ export const selectRewards = (state: RootState) => state.rewards.rewards;
 export const selectRewardsStatus = (state: RootState) => state.rewards.status;
 
 export const selectMyRewards = (state: RootState) => (
-  state.rewards.rewards.filter((reward) => reward.rewardieId === 12)
+  state.rewards.rewards.filter((reward) => reward.rewardRecipientId === 12)
 );
 
 export default rewardsSlice.reducer;
