@@ -26,7 +26,7 @@ export const AvatarContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 40px;
 
     p {
         padding-top: 10px;

@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     align-content: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100%;
 
     @media ${breakpoints.laptop} {
         width: 1024px;
