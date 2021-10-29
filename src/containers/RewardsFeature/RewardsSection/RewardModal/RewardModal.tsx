@@ -15,7 +15,7 @@ export const RewardModal:React.FC <Props> = ({ show, close }) => (
       <Input name="to" label="To" placeholder="Alex Brown" />
       <Input name="reward" label="Reward" placeholder="30" type="number" />
       <Textarea name="why" label="Why?" />
-      <Button type="button">Reward</Button>
+      <Button onClick={() => close()}>Reward</Button>
     </RewardModalContent>
   </Modal>
 );

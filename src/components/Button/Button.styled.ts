@@ -8,5 +8,10 @@ export const StyledButton = styled.button`
   padding: 10px 20px;
   font-weight: bold;
   font-size: 14px;
-  width: 100px
+  width: 100px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9
+  }
 `;
